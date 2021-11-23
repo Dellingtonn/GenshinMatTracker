@@ -35,6 +35,20 @@
   border: none;
 }
 
+.input {
+  display: inline-block;
+  text-align: right;
+  width: 150px;
+}
+
+#ascension {
+  display:block;
+}
+
+#talents{
+  display:block;
+}
+
 /* Change color of dropdown links on hover */
 .dropdown-content button:hover {background-color: rgb(189, 180, 180);}
 .show {display:block;}
