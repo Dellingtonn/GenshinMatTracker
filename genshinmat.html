@@ -1,15 +1,19 @@
 <html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='genshinmat.css'>
+        <script src="genshinmat.js"></script>
+    </head>
     <title>Genshin Mat Tracker</title>
 
     <body>
         <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                </div>
+            <button onclick="charDropdown()" class="dropbtn">Select A Character</button>
+            <div id = "selectChar" class="dropdown-content">
+                <button onclick="getCharMats('Diluc')">Diluc</button>
+                <button onclick="getCharMats('Kaeya')">Kaeya</button>
+                <button onclick="getCharMats('Jean')">Jean</button>
+            </div>
         </div>
-        <p>Testing</p>
+        <p id="pasteChar"></p>
     </body>
 </html>
