@@ -11,9 +11,13 @@
                 <div class="homeNav">
                     <button onclick="home()" class="homebtn">Home</button>
                 </div>
-
                 <div class="charDropdown">
                     <button onclick="charDropdown()" class="dropbtn">Select a Character</button>
+                </div>
+            </div>
+
+            <div class="subMenuWrapper">
+                <div id="mainSubMenu">
                     <div class="dropdown-content" id="selectChar">
                         <button onclick="getList('Pyro')" class="dropbtn">Pyro</button>
                         <button onclick="getList('Hydro')" class="dropbtn">Hydro</button>
@@ -24,149 +28,150 @@
                         <button onclick="getList('Dendro')" class="dropbtn">Dendro</button>
                     </div>
                 </div>
-            </div>
-            <div class="subMenuWrapper">
-                <div class="dropdown-content-sub" id="pyroChars">
-                    <button onclick="getCharMats('Diluc')" class="subDropbtn">Diluc</button>
-                </div>
-                <div class="dropdown-content-sub" id="hydroChars">
-
-                </div>
-                <div class="dropdown-content-sub" id="cryoChars">
-
-                </div>
-                <div class="dropdown-content-sub" id="electroChars">
-
-                </div>
-                <div class="dropdown-content-sub" id="geoChars">
-
-                </div>
-                <div class="dropdown-content-sub" id="anemoChars">
-
-                </div>
-                <div class="dropdown-content-sub" id="dendroChars">
-                    <button onclick="getCharMats(':(')" class="subDropbtn">None right now :(</button>
+                <div id="subSubMenu">
+                    <div class="dropdown-content-sub" id="pyroChars">
+                        <button onclick="getCharMats('Diluc')" class="subDropbtn">Diluc</button>
+                    </div>
+                    <div class="dropdown-content-sub" id="hydroChars">
+    
+                    </div>
+                    <div class="dropdown-content-sub" id="cryoChars">
+    
+                    </div>
+                    <div class="dropdown-content-sub" id="electroChars">
+    
+                    </div>
+                    <div class="dropdown-content-sub" id="geoChars">
+    
+                    </div>
+                    <div class="dropdown-content-sub" id="anemoChars">
+    
+                    </div>
+                    <div class="dropdown-content-sub" id="dendroChars">
+                        <button onclick="getCharMats(':(')" class="subDropbtn">None right now :(</button>
+                    </div>
                 </div>
             </div>
         </nav>
 
         <div id="charMats" style="display: none;">
             <h1 id="charName"></h1>
-            
-            <h2 id="charAscen">Ascension</h2>
 
             <div id = "ascenDiv">
-            <div class="block">
-                <lable id="bossGem1"></lable>
-                <input type="number" value="0" min="0" max="1">
-                <label> / 1</label>    
+                <h2 id="charAscen">Ascension</h2>
+                <div class="block">
+                    <lable id="bossGem1"></lable>
+                    <input type="number" value="0" min="0" max="1">
+                    <label> / 1</label>    
+                </div>
+                <div class="block">
+                    <lable id="bossGem2"></lable>
+                    <input type="number" value="0" min="0" max="9">
+                    <label> / 9</label>    
+                </div>
+                <div class="block">
+                    <lable id="bossGem3"></lable>
+                    <input type="number" value="0" min="0" max="9">
+                    <label> / 9</label>    
+                </div>
+                <div class="block">
+                    <lable id="bossGem4"></lable>
+                    <input type="number" value="0" min="0" max="6">
+                    <label> / 6</label>    
+                </div>
+                <div class="block">
+                    <lable id="bossMat"></lable>
+                    <input type="number" value="0" min="0" max="46">
+                    <label> / 46</label>    
+                </div>
+                <div class="block">
+                    <lable id="worldMats"></lable>
+                    <input type="number" value="0" min="0" max="168">
+                    <label> / 168</label>    
+                </div>
+                <div class="block">
+                    <lable id="mobAscen1"></lable>
+                    <input type="number" value="0" min="0" max="18">
+                    <label> / 18</label>    
+                </div>
+                <div class="block">
+                    <lable id="mobAscen2"></lable>
+                    <input type="number" value="0" min="0" max="30">
+                    <label> / 30</label>    
+                </div>
+                <div class="block">
+                    <lable id="mobAscen3"></lable>
+                    <input type="number" value="0" min="0" max="36">
+                    <label> / 36</label>    
+                </div>
+                <div class="block">
+                    <lable>Mora: </lable>
+                    <input type="number" value="0" min="0" max="420000">
+                    <label> / 420,000</label>    
+                </div>
             </div>
-            <div class="block">
-                <lable id="bossGem2"></lable>
-                <input type="number" value="0" min="0" max="9">
-                <label> / 9</label>    
-            </div>
-            <div class="block">
-                <lable id="bossGem3"></lable>
-                <input type="number" value="0" min="0" max="9">
-                <label> / 9</label>    
-            </div>
-            <div class="block">
-                <lable id="bossGem4"></lable>
-                <input type="number" value="0" min="0" max="6">
-                <label> / 6</label>    
-            </div>
-            <div class="block">
-                <lable id="bossMat"></lable>
-                <input type="number" value="0" min="0" max="46">
-                <label> / 46</label>    
-            </div>
-            <div class="block">
-                <lable id="worldMats"></lable>
-                <input type="number" value="0" min="0" max="168">
-                <label> / 168</label>    
-            </div>
-            <div class="block">
-                <lable id="mobAscen1"></lable>
-                <input type="number" value="0" min="0" max="18">
-                <label> / 18</label>    
-            </div>
-            <div class="block">
-                <lable id="mobAscen2"></lable>
-                <input type="number" value="0" min="0" max="30">
-                <label> / 30</label>    
-            </div>
-            <div class="block">
-                <lable id="mobAscen3"></lable>
-                <input type="number" value="0" min="0" max="36">
-                <label> / 36</label>    
-            </div>
-            <div class="block">
-                <lable>Mora: </lable>
-                <input type="number" value="0" min="0" max="420000">
-                <label> / 420,000</label>    
-            </div>
-            </div>
-            
-            <h2 id="charTalent">Talents</h2>
 
-            <div class="block">
-                <lable id="book1"></lable>
-                <input type="number" value="0" min="0" max="9">
-                <label> / 9</label>    
+            <div id="talentDiv">
+                <h2 id="charTalent">Talents</h2>
+                <div class="block">
+                    <lable id="book1"></lable>
+                    <input type="number" value="0" min="0" max="9">
+                    <label> / 9</label>    
+                </div>
+                <div class="block">
+                    <lable id="book2"></lable>
+                    <input type="number" value="0" min="0" max="63">
+                    <label> / 63</label>    
+                </div>
+                <div class="block">
+                    <lable id="book3"></lable>
+                    <input type="number" value="0" min="0" max="114">
+                    <label> / 114</label>    
+                </div>
+                <div class="block">
+                    <lable id="mobTal1"></lable>
+                    <input type="number" value="0" min="0" max="18">
+                    <label> / 18</label>    
+                </div>
+                <div class="block">
+                    <lable id="mobTal2"></lable>
+                    <input type="number" value="0" min="0" max="66">
+                    <label> / 66</label>    
+                </div>
+                <div class="block">
+                    <lable id="mobTal3"></lable>
+                    <input type="number" value="0" min="0" max="93">
+                    <label> / 93</label>    
+                </div>
+                <div class="block">
+                    <lable id="weeklyBoss"></lable>
+                    <input type="number" value="0" min="0" max="18">
+                    <label> / 18</label>    
+                </div>
+                <div class="block">
+                    <lable>Crowns: </lable>
+                    <input type="number" value="0" min="0" max="3">
+                    <label> / 3</label>    
+                </div>
+                <div class="block">
+                    <lable>Mora: </lable>
+                    <input type="number" value="0" min="0" max="4950000">
+                    <label> / 4,950,000</label>    
+                </div>
             </div>
-            <div class="block">
-                <lable id="book2"></lable>
-                <input type="number" value="0" min="0" max="63">
-                <label> / 63</label>    
-            </div>
-            <div class="block">
-                <lable id="book3"></lable>
-                <input type="number" value="0" min="0" max="114">
-                <label> / 114</label>    
-            </div>
-            <div class="block">
-                <lable id="mobTal1"></lable>
-                <input type="number" value="0" min="0" max="18">
-                <label> / 18</label>    
-            </div>
-            <div class="block">
-                <lable id="mobTal2"></lable>
-                <input type="number" value="0" min="0" max="66">
-                <label> / 66</label>    
-            </div>
-            <div class="block">
-                <lable id="mobTal3"></lable>
-                <input type="number" value="0" min="0" max="93">
-                <label> / 93</label>    
-            </div>
-            <div class="block">
-                <lable id="weeklyBoss"></lable>
-                <input type="number" value="0" min="0" max="18">
-                <label> / 18</label>    
-            </div>
-            <div class="block">
-                <lable>Crowns: </lable>
-                <input type="number" value="0" min="0" max="3">
-                <label> / 3</label>    
-            </div>
-            <div class="block">
-                <lable>Mora: </lable>
-                <input type="number" value="0" min="0" max="4950000">
-                <label> / 4,950,000</label>    
-            </div>
-            
-            <h2 id="exp">EXP</h2>
 
-            <div class="block">
-                <lable>Heroes Wit: </lable>
-                <input type="number" value="0" min="0" max="432">
-                <label> / 432</label>    
-            </div>
-            <div class="block">
-                <lable>Mora: </lable>
-                <input type="number" value="0" min="0" max="1672000">
-                <label> / 1,672,000</label>    
+            <div id="expDiv">
+                <h2 id="exp">EXP</h2>
+                <div class="block">
+                    <lable>Heroes Wit: </lable>
+                    <input type="number" value="0" min="0" max="432">
+                    <label> / 432</label>    
+                </div>
+                <div class="block">
+                    <lable>Mora: </lable>
+                    <input type="number" value="0" min="0" max="1672000">
+                    <label> / 1,672,000</label>    
+                </div>
             </div>
         </div>
     </body>
