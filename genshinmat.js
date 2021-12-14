@@ -1,12 +1,38 @@
-// The functions charDropdown and window.onclick are template code from W3 schools:
-// https://www.w3schools.com/howto/howto_css_dropdown.asp
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+/* Shows dropdown of characters for the user to click on */
 function charDropdown() {
-    document.getElementById("selectChar").classList.toggle("show");
+  closeSubMenus();
+  document.getElementById("selectChar").classList.toggle("show");
 }
 
-  // Close the dropdown menu if the user clicks outside of it
+/* Gets the list of the selected element, closes submenus first */
+function getList(listName) {
+  closeSubMenus();
+  switch(listName){
+    case "Pyro":
+      document.getElementById("pyroChars").classList.toggle("show");
+      break;
+    case "Hydro":
+      document.getElementById("hydroChars").classList.toggle("show");
+      break;
+    case "Cryo":
+      document.getElementById("cryoChars").classList.toggle("show");
+      break;
+    case "Electro":
+      document.getElementById("electroChars").classList.toggle("show");
+      break;
+    case "Geo":
+      document.getElementById("geoChars").classList.toggle("show");
+      break;
+    case "Anemo":
+      document.getElementById("anemoChars").classList.toggle("show");
+      break;
+    case "Dendro":
+      document.getElementById("dendroChars").classList.toggle("show");
+      break;
+  }
+}
+
+  /* Close the dropdown menu and its sub menus if the user clicks outside of it */
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -17,21 +43,37 @@ function charDropdown() {
           openDropdown.classList.remove('show');
         }
       }
+      closeSubMenus();
     }
   }
 
+  /* Get the char materials of the selected character */
 function getCharMats(charName) {
-    document.getElementById("charName").innerHTML = charName;
-    document.getElementById("charMats").style.display = "";
-    switch(charName){
-      case "Diluc":
-        setLabels(dilucMats);
-        break;
-      default:
-        document.getElementById("charMats").style.display = "none";
-    }
+  closeSubMenus();
+  document.getElementById("charName").innerHTML = charName;
+  document.getElementById("charMats").style.display = "";
+  switch(charName){
+    case "Diluc":
+      setLabels(dilucMats);
+      break;
+    default:
+      document.getElementById("charMats").style.display = "none";
+  }
 }
 
+/* Closes submenus in the nav bar */
+function closeSubMenus(){
+  var subDropdowns = document.getElementsByClassName("dropdown-content-sub");
+  var j;
+  for (j = 0; j < subDropdowns.length; j++) {
+    var openDropdown = subDropdowns[j];
+    if (openDropdown.classList.contains('show')) {
+      openDropdown.classList.remove('show');
+    }
+  }
+}
+
+/* Sets the labels in the body of the HTML */
 function setLabels(charMats){
   document.getElementById("bossGem1").innerHTML = charMats.bossGem1;
   document.getElementById("bossGem2").innerHTML = charMats.bossGem2;
@@ -51,6 +93,7 @@ function setLabels(charMats){
   document.getElementById("weeklyBoss").innerHTML = charMats.weeklyMat;
 }
 
+/* Array of Dilucs mats */
 const dilucMats = {bossGem1:"Agnidus Agate Silver", bossGem2:"Agnidus Agate Fragement",
   bossGem3:"Agnidus Agate Chunk", bossGem4:"Agnidus Agate Gemstone", bossMat:"Everflame Seed",
   worldMat:"Small Lamp Grass", mobMat1:"Recruit's Insignia", mobMat2:"Sergeant's Insignia",

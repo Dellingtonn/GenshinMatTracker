@@ -6,17 +6,56 @@
     <title>Genshin Mat Tracker</title>
 
     <body>
-        <div class="dropdown">
-            <button onclick="charDropdown()" class="dropbtn">Select A Character</button>
-            <div id = "selectChar" class="dropdown-content">
-                <button onclick="getCharMats('Diluc')">Diluc</button>
-                <button onclick="getCharMats('Kaeya')">Kaeya</button>
-                <button onclick="getCharMats('Jean')">Jean</button>
+        <nav>
+            <div class="wrapper">
+                <div class="homeNav">
+                    <button onclick="home()" class="homebtn">Home</button>
+                </div>
+
+                <div class="charDropdown">
+                    <button onclick="charDropdown()" class="dropbtn">Select a Character</button>
+                    <div class="dropdown-content" id="selectChar">
+                        <button onclick="getList('Pyro')" class="dropbtn">Pyro</button>
+                        <button onclick="getList('Hydro')" class="dropbtn">Hydro</button>
+                        <button onclick="getList('Cryo')" class="dropbtn">Cryo</button>
+                        <button onclick="getList('Electro')" class="dropbtn">Electro</button>
+                        <button onclick="getList('Geo')" class="dropbtn">Geo</button>
+                        <button onclick="getList('Anemo')" class="dropbtn">Anemo</button>
+                        <button onclick="getList('Dendro')" class="dropbtn">Dendro</button>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="subMenuWrapper">
+                <div class="dropdown-content-sub" id="pyroChars">
+                    <button onclick="getCharMats('Diluc')" class="subDropbtn">Diluc</button>
+                </div>
+                <div class="dropdown-content-sub" id="hydroChars">
+
+                </div>
+                <div class="dropdown-content-sub" id="cryoChars">
+
+                </div>
+                <div class="dropdown-content-sub" id="electroChars">
+
+                </div>
+                <div class="dropdown-content-sub" id="geoChars">
+
+                </div>
+                <div class="dropdown-content-sub" id="anemoChars">
+
+                </div>
+                <div class="dropdown-content-sub" id="dendroChars">
+                    <button onclick="getCharMats(':(')" class="subDropbtn">None right now :(</button>
+                </div>
+            </div>
+        </nav>
+
         <div id="charMats" style="display: none;">
             <h1 id="charName"></h1>
+            
             <h2 id="charAscen">Ascension</h2>
+
+            <div id = "ascenDiv">
             <div class="block">
                 <lable id="bossGem1"></lable>
                 <input type="number" value="0" min="0" max="1">
@@ -67,7 +106,10 @@
                 <input type="number" value="0" min="0" max="420000">
                 <label> / 420,000</label>    
             </div>
+            </div>
+            
             <h2 id="charTalent">Talents</h2>
+
             <div class="block">
                 <lable id="book1"></lable>
                 <input type="number" value="0" min="0" max="9">
@@ -113,7 +155,9 @@
                 <input type="number" value="0" min="0" max="4950000">
                 <label> / 4,950,000</label>    
             </div>
+            
             <h2 id="exp">EXP</h2>
+
             <div class="block">
                 <lable>Heroes Wit: </lable>
                 <input type="number" value="0" min="0" max="432">

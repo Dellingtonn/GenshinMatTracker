@@ -1,54 +1,175 @@
-/* .dropbtn, .dropdown, .dropdown-content were template taken from W3 schools
-    https://www.w3schools.com/howto/howto_css_dropdown.asp 
-    with some modifications to style and using buttons in dropdown */
-/* Dropdown Button */
+/* Dropdown button */
 .dropbtn {
-  background-color: #ffffff;
-  min-width: 160px;
   color: #000000;
-  padding: 8px;
-  font-size: 16px;
-  border:black;
-  border-style: solid;
+  background: none;
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 18pt;
+  width: 100%;
+  height: max-content;
+  display: block;
+}
+
+/* Home button */
+.homebtn {
+  color: #000000;
+  background: none;
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 18pt;
+  height: max-content;
+  display: block;
+}
+
+/* Dropdown button for sub menu */
+.subDropbtn {
+  color: #000000;
+  background: none;
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 18pt;
+  height: max-content;
+  display: block;
+}
+
+/* CSS for wrapper of the two button divs in the nav bar */
+.wrapper {
+  width: 100%;
+  display: inline-block;
 }
 
 /* The container <div> - needed to position the dropdown content */
-.dropdown {
+.charDropdown {
+  float: right;
+  width: 30%;
   position: relative;
-  display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown content (Hidden by Default) */
 .dropdown-content {
+  min-width: 100%;
+  float: left;
   display: none;
   position: absolute;
-  z-index: 1;
 }
 
-/* Links inside the dropdown */
+/* Element buttons inside the dropdown */
 .dropdown-content button {
   color: black;
-  font-size: 12pt;
+  width: 100%;
   padding: 8px 16px;
-  min-width: 160px;
+  font-size: 12pt;
   display: block;
+  border-bottom: solid;
+  border-left: solid;
+  border-right: solid;
+  border-width: 1px;
+  background-color: rgb(221, 210, 149);
+}
+
+/* Element buttons inside the sub menu dropdown */
+.dropdown-content-sub button {
+  color: black;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 12pt;
+  display: block;
+  border-bottom: solid;
+  border-left: solid;
+  border-right: solid;
+  border-width: 1px;
+  background-color: rgb(221, 210, 149);
+}
+
+/* Wrapper for submenus */
+.subMenuWrapper {
+  float: right;
+  width: 70%;
+  display: block;
+  position: absolute;
+}
+
+/* Dropdown content sub menu buttons (Hidden by Default) */
+.dropdown-content-sub {
+  float: right;
+  min-width: 50%;
+  display: none;
   border: none;
 }
 
-.input {
+/* Characters inside the dropdown */
+.dropdown-content-sub button {
+  color: black;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 12pt;
   display: inline-block;
-  text-align: right;
-  width: 150px;
+  background-color: rgb(221, 210, 149);
 }
 
-#ascension {
-  display:block;
+/* Sets formatting for each element in each div-block */
+.block {
+  font-size: 20;
+  padding: 8px;
 }
 
-#talents{
-  display:block;
+/* Sets size for input box font size */
+input {
+  font-size: 20;
+}
+
+/* Sets formatting for nav bar */
+nav {
+  min-width: 100%;
+  min-height: 7%;
+  justify-content: space-around;
+  background-color: rgb(221, 210, 149);
+  border-bottom: solid;
+  border-width: 1px;
+  position: absolute;
+}
+
+/* Removes padding from the left of the home button */
+ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+/* Formatting for the nav bar */
+.homeNav {
+  display: block;
+  max-height: max-content;
+}
+
+/* Sets format and padding for home button */
+.homeNav button {
+  padding: 15px 15px;
+  float: left;
+  text-align: center;
+  font-size: 18pt;
+  min-width: 15%;
+}
+
+/* Removes margin from body so nav bar can span page */
+body {
+  background-color: #e7e5dd;
+  margin: 0px;
+}
+
+/* Padding for the main body of the HTML page which contains the charmats */
+#charMats {
+  padding-top: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 7%;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content button:hover {background-color: rgb(189, 180, 180);}
+.homeNav button:hover {background-color: rgb(146, 141, 141);}
+.charDropdown button:hover {background-color: rgb(146, 141, 141);}
+.dropdown-content button:hover {background-color: rgb(146, 141, 141);}
+.dropdown-content-sub button:hover {background-color: rgb(146, 141, 141);}
 .show {display:block;}
